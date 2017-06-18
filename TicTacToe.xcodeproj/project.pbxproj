@@ -14,6 +14,7 @@
 		E522FC931EF2CE4000CAE500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E522FC911EF2CE4000CAE500 /* LaunchScreen.storyboard */; };
 		E522FC9E1EF2CE4000CAE500 /* TicTacToeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E522FC9D1EF2CE4000CAE500 /* TicTacToeTests.swift */; };
 		E522FCA91EF2CE4000CAE500 /* TicTacToeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E522FCA81EF2CE4000CAE500 /* TicTacToeUITests.swift */; };
+		E55A23DF1EF2D8B100816A6B /* GridLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A23DE1EF2D8B100816A6B /* GridLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E522FCA41EF2CE4000CAE500 /* TicTacToeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TicTacToeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E522FCA81EF2CE4000CAE500 /* TicTacToeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeUITests.swift; sourceTree = "<group>"; };
 		E522FCAA1EF2CE4000CAE500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E55A23DE1EF2D8B100816A6B /* GridLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GridLabel.swift; path = ../../GridLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				E522FC881EF2CE4000CAE500 /* AppDelegate.swift */,
 				E522FC8A1EF2CE4000CAE500 /* ViewController.swift */,
 				E522FC8C1EF2CE4000CAE500 /* Main.storyboard */,
+				E55A23DE1EF2D8B100816A6B /* GridLabel.swift */,
 				E522FC8F1EF2CE4000CAE500 /* Assets.xcassets */,
 				E522FC911EF2CE4000CAE500 /* LaunchScreen.storyboard */,
 				E522FC941EF2CE4000CAE500 /* Info.plist */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E55A23DF1EF2D8B100816A6B /* GridLabel.swift in Sources */,
 				E522FC8B1EF2CE4000CAE500 /* ViewController.swift in Sources */,
 				E522FC891EF2CE4000CAE500 /* AppDelegate.swift in Sources */,
 			);
@@ -507,6 +511,7 @@
 				E522FCAF1EF2CE4000CAE500 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E522FCB01EF2CE4000CAE500 /* Build configuration list for PBXNativeTarget "TicTacToeTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +520,7 @@
 				E522FCB21EF2CE4000CAE500 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E522FCB31EF2CE4000CAE500 /* Build configuration list for PBXNativeTarget "TicTacToeUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +529,7 @@
 				E522FCB51EF2CE4000CAE500 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
