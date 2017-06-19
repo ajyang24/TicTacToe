@@ -49,7 +49,7 @@ class ViewController: UIViewController
                 xTurn = !xTurn
             }
         }
-        checkForWinner(playerSymbol: "Player")
+        checkForWinner(playerName: "Player")
         checkForTie()
         
         
@@ -68,7 +68,7 @@ class ViewController: UIViewController
                 label.text = text
                 label.canTap = false
                 xTurn = !xTurn
-                checkForWinner(playerSymbol: "CPU")
+                checkForWinner(playerName: "CPU")
                 checkForTie()
                 break
             }
@@ -97,7 +97,7 @@ class ViewController: UIViewController
         gameOver = true
     }
     
-    func checkForWinner(playerSymbol : String)
+    func checkForWinner(playerName : String)
     {
         if (labelTopRight.text! == labelTopCenter.text! && labelTopCenter.text! == labelTopLeft.text!) && labelTopRight.canTap == false ||
             (labelCenterRight.text! == labelCenterCenter.text! && labelCenterCenter.text! == labelCenterLeft.text!) && labelCenterRight.canTap == false ||
@@ -109,19 +109,18 @@ class ViewController: UIViewController
             (labelTopRight.text! == labelCenterCenter.text! && labelCenterCenter.text! == labelBottomLeft.text!) && labelTopRight.canTap == false
         {
         
-            displayWinningMessage(message: "\(playerSymbol) has won!")
+            displayWinningMessage(message: "\(playerName) has won!")
         
         }
     }
     
     func checkForTie()
     {
-        if gameOver == true
-        {
-            return
-        }
-        
-        var emptyBoxLeft : Bool = false
+//        if gameOver == true
+//        {
+//            return
+//        }
+        var emptyBoxLeft = false
         
         for label in labelsArray
         {
@@ -129,7 +128,7 @@ class ViewController: UIViewController
             {
                 emptyBoxLeft = true
             }
-    }
+        }
         if emptyBoxLeft == false
         {
             displayWinningMessage(message: "Cat's Game!")
@@ -140,11 +139,8 @@ class ViewController: UIViewController
     {
         if gameOver == true
         {
-            print("Game over.")
             return
         }
-        
-        print("Tap executed.")
         if xTurn == true
         {
             setXorO(sender: sender, text : "X")
