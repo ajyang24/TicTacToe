@@ -104,8 +104,18 @@
                                     <outletCollection property="gestureRecognizers" destination="EaU-3y-UO1" appends="YES" id="uQ5-yg-P2j"/>
                                 </connections>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tic Tac Toe 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLy-9s-jw8">
+                                <rect key="frame" x="57" y="51" width="261" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZLy-9s-jw8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="31" id="BgA-Pi-BzK"/>
+                            <constraint firstItem="ZLy-9s-jw8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tGJ-RF-Fhh"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="backgroundView" destination="C4g-3R-kGg" id="CQa-De-Msg"/>
@@ -127,6 +137,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="116" y="108.39580209895054"/>
         </scene>
     </scenes>
 </document>
