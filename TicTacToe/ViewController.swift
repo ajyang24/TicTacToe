@@ -49,13 +49,17 @@ class ViewController: UIViewController
                 xTurn = !xTurn
             }
         }
-        checkForWinner()
+        checkForWinner(playerSymbol: "Player")
         checkForTie()
         
         
     }
     func setCPUMove(text : String)
     {
+        if gameOver == true
+        {
+            return
+        }
         for label in labelsArray
         {
             
@@ -64,9 +68,9 @@ class ViewController: UIViewController
                 label.text = text
                 label.canTap = false
                 xTurn = !xTurn
-                checkForWinner()
+                checkForWinner(playerSymbol: "CPU")
                 checkForTie()
-                return
+                break
             }
         }
     }
@@ -78,9 +82,9 @@ class ViewController: UIViewController
         {
             label.text = ""
             label.canTap = true
-            xTurn = true
-            gameOver = false
         }
+        xTurn = true
+        gameOver = false
     }
     
     func displayWinningMessage(message:String) {
@@ -93,7 +97,7 @@ class ViewController: UIViewController
         gameOver = true
     }
     
-    func checkForWinner()
+    func checkForWinner(playerSymbol : String)
     {
         if (labelTopRight.text! == labelTopCenter.text! && labelTopCenter.text! == labelTopLeft.text!) && labelTopRight.canTap == false ||
             (labelCenterRight.text! == labelCenterCenter.text! && labelCenterCenter.text! == labelCenterLeft.text!) && labelCenterRight.canTap == false ||
@@ -104,8 +108,9 @@ class ViewController: UIViewController
             (labelTopLeft.text! == labelCenterCenter.text! && labelCenterCenter.text! == labelBottomRight.text!) && labelTopLeft.canTap == false ||
             (labelTopRight.text! == labelCenterCenter.text! && labelCenterCenter.text! == labelBottomLeft.text!) && labelTopRight.canTap == false
         {
-            displayWinningMessage(message: "You have won!")
-            
+        
+            displayWinningMessage(message: "\(playerSymbol) has won!")
+        
         }
     }
     
@@ -115,7 +120,9 @@ class ViewController: UIViewController
         {
             return
         }
+        
         var emptyBoxLeft : Bool = false
+        
         for label in labelsArray
         {
             if label.canTap == true
